@@ -1,0 +1,15 @@
+The AI tool used
+    - ChatGPT
+The ways of using
+    - I use ChatGPT for guidance and inspiration.
+    Questions asked
+        Frontend
+        - How can I combine my HTML, CSS and Javascript files into Svelte?
+        - Please provide a brief tutorials for Svelte.
+        - If I already have styles in App.svelte, what is the use of app.css?
+        - What is the function of main.ts in svelte?
+        - So in Svelte, we usually have different parts(.svelte files), and CSS, Javascript and HTML in the same file?
+        Backend
+        - How can I use New York Times API to find articles in Sacremento/Davis area?
+Evaluation
+    - ChatGPT provided detailed answers to my problem, it is very helpful. However, sometimes it does not provide accurate answer because it does not know my codes clearly.
