@@ -34,7 +34,7 @@
         const abstractText = article.abstract || "No Abstract";
         const webUrl = article.web_url;
         const imageUrl = article.multimedia?.default?.url || "";
-        const readtimeText = Math.ceil(article.word_count / 120) + " MIN READ" || "No Readtime";
+        const readtimeText = Math.ceil(article.word_count / 150) + " MIN READ" || "No Readtime";
 
         //set the data to the html
         titles[i].innerHTML = `<a href="${webUrl}" target="_blank">${titleText}</a>`;
@@ -82,7 +82,7 @@
         <h2 class="title">Loading...</h2>
         <p class="abstract"></p>
         <!-- Full summary -->
-        <p class="readtime">7 MIN READ</p>
+        <p class="readtime"></p>
         <!-- Read time -->
         <figure class="images">
           <img class="picture" alt="Loading..."/>
@@ -97,7 +97,7 @@
         <h2 class="title">Loading...</h2>
         <p class="abstract"></p>
         <!-- Full summary -->
-        <p class="readtime">5 MIN READ</p>
+        <p class="readtime"></p>
       </div>
 
       <figure class="images">
@@ -112,7 +112,7 @@
         <h2 class="title">Loading...</h2>
         <p class="abstract"></p>
         <!-- Full summary -->
-        <p class="readtime">4 MIN READ</p>
+        <p class="readtime"></p>
       </div>
 
       <figure class="images">
@@ -138,7 +138,7 @@
           <h2 class="title">Loading...</h2>
           <p class="abstract"></p>
           <!-- Full summary -->
-          <p class="readtime">7 MIN READ</p>
+          <p class="readtime"></p>
         </div>
       </article>
     </section>
@@ -154,7 +154,7 @@
           <h2 class="title">Loading...</h2>
           <p class="abstract"></p>
           <!-- Full summary -->
-          <p class="readtime">7 MIN READ</p>
+          <p class="readtime"></p>
         </div>
       </article>
     </section>
@@ -170,7 +170,7 @@
           <h2 class="title">Loading...</h2>
           <p class="abstract"></p>
           <!-- Full summary -->
-          <p class="readtime">7 MIN READ</p>
+          <p class="readtime"></p>
         </div>
       </article>
     </section>
@@ -189,7 +189,7 @@
           <h2 class="title">Loading...</h2>
           <p class="abstract"></p>
           <!-- Full summary -->
-          <p class="readtime">7 MIN READ</p>
+          <p class="readtime"></p>
         </div>
       </article>
     </div>
@@ -203,7 +203,7 @@
           <h2 class="title">Loading...</h2>
           <p class="abstract"></p>
           <!-- Full summary -->
-          <p class="readtime">7 MIN READ</p>
+          <p class="readtime"></p>
         </div>
       </article>
     </div>
@@ -217,7 +217,7 @@
           <h2 class="title">Loading...</h2>
           <p class="abstract"></p>
           <!-- Full summary -->
-          <p class="readtime">7 MIN READ</p>
+          <p class="readtime"></p>
         </div>
       </article>
     </div>
@@ -231,7 +231,7 @@
           <h2 class="title">Loading...</h2>
           <p class="abstract"></p>
           <!-- Full summary -->
-          <p class="readtime">7 MIN READ</p>
+          <p class="readtime"></p>
         </div>
       </article>
     </div>
