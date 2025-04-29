@@ -16,4 +16,10 @@
     flex-direction: column;
     min-height: 100vh;
   }
+  #vline {
+    width: 1px;
+    height: 1.2rem;
+    background-color: rgb(175, 165, 165);
+    margin: 1rem;
+  }
 </style>

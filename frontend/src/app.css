@@ -32,6 +32,9 @@ body > *{
   #lineleft {
       display: none;
   }    
+  #vline {
+    display: none;
+  }
   #middle, #languages, #trend, #date {
       display: none;
   }

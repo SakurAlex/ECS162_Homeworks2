@@ -17,5 +17,10 @@ The ways of using
         - If I fetch some url apis, how can I change python flask file?
         - What does onMount function mean in main.ts in Svelte file?
         - What if we don't use onMount when we fetch? What will happen?
+        - Why my page alert: Error:Unexpected token '<', "<!DOCTYPE "... is not valid JSON?
+        - This is the report after my backend start: {}, and this is the report after my frontend start: {}, is there any problem?
+        - Why this part {} does not work when I try to put images from API into HTML
+        - How I calculate the ceiling of the math division in Javascript?
 Evaluation
     - ChatGPT provided detailed answers to my problem, it is very helpful. However, sometimes it does not provide accurate answer because it does not know my codes clearly.
+    - It provides suggestion on debugging and it really helps me a lot.

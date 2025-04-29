@@ -33,7 +33,9 @@
 
     let index = 0;
     let currentTrend = data[0];
-
+    /**
+     * This function updates the current trend.
+     */
     function updateMarket() {
         index = (index + 1) % 3;
         currentTrend = data[index];
