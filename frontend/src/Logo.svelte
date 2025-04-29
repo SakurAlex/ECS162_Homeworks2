@@ -1,5 +1,45 @@
 <script>
-  import logo from './assets/NewYorkTimes.svg';
+    import logo from './assets/NewYorkTimes.svg';
+    
+    //Keep current date on the top left corner
+    const date = new Date();
+    const currentDate = date.toLocaleString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+    //Trend data on the top right corner
+    const data = [
+        {
+            name: "Sleep",
+            value: "-0.19%↓",
+            color: "red"
+        },
+        {
+            name: "Study",
+            value: "+0.31%↑",
+            color: "green"
+        },
+        {
+            name: "Social",
+            value: "-0.45%↓",
+            color: "red"
+        }
+    ];
+
+    let index = 0;
+    let currentTrend = data[0];
+
+    function updateMarket() {
+        index = (index + 1) % 3;
+        currentTrend = data[index];
+    }
+
+    setInterval(updateMarket, 1500);
 </script>
 
 <div id="logo">
@@ -10,7 +50,7 @@
         <!--
             The time of the current day
         -->
-        <p id="day"></p> <!-- Populated in script.js -->
+        <p>{currentDate}</p>
         <p>Today's Paper</p> <!-- Static label -->
     </div>
     <figure>
@@ -25,7 +65,7 @@
         <!--
             The current trend (stock market)
         -->
-        <p id="market"></p> <!-- Populated in script.js -->
+        <p>{currentTrend.name} <span style="color: {currentTrend.color};">{currentTrend.value}</span></p>
     </div>
 </div>
 
