@@ -1,3 +1,45 @@
+<script lang="ts">
+  const BASE_URL = 'http://127.0.0.1:8000';
+  import { onMount } from 'svelte';
+  onMount(() => {
+    fetch(`${BASE_URL}/api/ucdavis-news`)
+      .then(statusCheck)
+      .then(resp => resp.json())
+      .then(processData)
+      .catch(handleError); 
+  });
+
+  /**
+   * This function processes the data.
+   * 
+   * @param {any} data - The data from the fetch request.
+   */
+  function processData(data: any) {
+    console.log(data);
+  }
+  /**
+  * This function checks if the response is ok.
+  * 
+  * @param {Response} res - The response from the fetch request.
+  * @returns {Promise<Response>} The response from the fetch request.
+  */
+  async function statusCheck(res: Response) {
+    if (!res.ok) {
+      throw new Error(await res.text());
+    }
+    return res;
+  }
+  /**
+   * This function handles the error.
+   * 
+   * @param {Error} err - The error from the fetch request.
+   */
+  function handleError(err: Error) {
+    alert("Error:" + err.message);
+  }
+
+</script>
+
 <main id="content">
   <!-- Three-column layout -->
   <!-- Left column: featured articles -->
@@ -5,12 +47,12 @@
     <article>
       <div>
         <a href="https://www.nytimes.com/">
-          <h2>
+          <h2 class="title">
             <!-- Headline -->
             Lorem ipsum dolor sit amet consectetur adipiscing elit.
           </h2>
         </a>
-        <p>
+        <p class="abstract">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -29,9 +71,9 @@
 
       <div>
         <a href="https://www.nytimes.com/">
-          <h2>Dolor sit amet consectetur adipiscing elit quisque faucibus.</h2>
+          <h2 class="title">Dolor sit amet consectetur adipiscing elit quisque faucibus.</h2>
         </a>
-        <p>
+        <p class="abstract">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -56,7 +98,7 @@
         <a href="https://www.nytimes.com/">
           <h2>Dolor sit amet consectetur adipiscing elit quisque faucibus.</h2>
         </a>
-        <p>
+        <p class="abstract">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est
@@ -93,11 +135,11 @@
       <article>
         <div>
           <a href="https://www.nytimes.com/">
-            <h2>
+            <h2 class="title">
               Conubia nostra inceptos himenaeos orci varius natoque penatibus.
             </h2>
           </a>
-          <p>
+          <p class="abstract">
             Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis
             massa nisl malesuada lacinia integer nunc posuere. Semper vel class
             aptent taciti sociosqu ad litora.
@@ -119,10 +161,8 @@
     <section class="articles">
       <article>
         <div>
-          <a href="https://www.nytimes.com/">
-            <h2>Placerat in id cursus mi pretium tellus duis.</h2>
-          </a>
-          <p>
+          <h2 class="title">Placerat in id cursus mi pretium tellus duis.</h2>
+          <p class="abstract">
             Ex sapien vitae pellentesque sem placerat in id. Placerat in id
             cursus mi pretium tellus duis.
           </p>
@@ -132,10 +172,8 @@
         <div class="hline"></div>
         <!-- Separator -->
         <div>
-          <a href="https://www.nytimes.com/">
-            <h2>Urna tempor pulvinar vivamus fringilla lacus nec metus.</h2>
-          </a>
-          <p>
+          <h2 class="title">Urna tempor pulvinar vivamus fringilla lacus nec metus.</h2>
+          <p class="abstract">
             Nulla molestie mattis scelerisque maximus eget fermentum odio. Purus
             est efficitur laoreet mauris pharetra vestibulum fusce.
           </p>
@@ -180,12 +218,8 @@
         <div class="hline"></div>
         <!-- Separator -->
         <div>
-          <a
-            href="https://www.nytimes.com/interactive/2025/04/10/travel/things-to-do-hudson-valley.html"
-          >
-            <h2>Dis parturient montes nascetur ridiculus</h2>
-          </a>
-          <p>
+          <h2 class="title">Dis parturient montes nascetur ridiculus</h2>
+          <p class="abstract">
             Primis vulputate ornare sagittis vehicula praesent dui felis.
             Senectus netus suscipit auctor curabitur facilisi cubilia curae.
             Quisque faucibus ex sapien vitae pellentesque sem placerat.
@@ -214,17 +248,22 @@
         <div class="hline"></div>
         <!-- Separator -->
         <div>
-          <h2>
+          <h2 class="title">
             Blandit quis suspendisse aliquet nisi sodales consequat magna.
             Ligula congue sollicitudin erat viverra ac tincidunt nam.
           </h2>
+          <p class="abstract">
+            Primis vulputate ornare sagittis vehicula praesent dui felis.
+            Senectus netus suscipit auctor curabitur facilisi cubilia curae.
+            Quisque faucibus ex sapien vitae pellentesque sem placerat.
+          </p>
           <p class="readtime">4 MIN READ</p>
         </div>
         <div class="hline"></div>
         <!-- Separator -->
         <div>
-          <h2>Bridiculus mus donec rhoncus eros lobortis nulla molestie.</h2>
-          <p>
+          <h2 class="title">Bridiculus mus donec rhoncus eros lobortis nulla molestie.</h2>
+          <p class="abstract">
             Primis vulputate ornare sagittis vehicula praesent dui felis.
             Senectus netus suscipit auctor curabitur facilisi cubilia curae.
             Quisque faucibus ex sapien vitae pellentesque sem placerat.

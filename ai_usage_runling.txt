@@ -10,7 +10,12 @@ The ways of using
         - What is the function of main.ts in svelte?
         - So in Svelte, we usually have different parts(.svelte files), and CSS, Javascript and HTML in the same file?
         - I got the error 'dayElement' is possibly 'null' in Typescript, how should I change it?
+        - Do we use Typescript if we just put script in the .svelte file?
+        - Why my page becomes null after editing my script? This is my code {current code}
         Backend
         - How can I use New York Times API to find articles in Sacremento/Davis area?
+        - If I fetch some url apis, how can I change python flask file?
+        - What does onMount function mean in main.ts in Svelte file?
+        - What if we don't use onMount when we fetch? What will happen?
 Evaluation
     - ChatGPT provided detailed answers to my problem, it is very helpful. However, sometimes it does not provide accurate answer because it does not know my codes clearly.
