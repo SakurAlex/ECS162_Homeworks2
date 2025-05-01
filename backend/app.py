@@ -17,6 +17,7 @@ def get_news():
     url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=%22UC%20Davis%22&api-key=w4rcy5YA6GG99HeECAyyBwmfzARZefFx"
     response = requests.get(url) # Perform HTTP GET
     data = response.json() # Parse response as JSON
+    data['response']['docs'].extend(requests.get(url + "&page=1").json()['response']['docs']) # Combine page 0 and page 1
     return jsonify(data) # Return JSON to client
 
 @app.route('/') # Serve index for root
