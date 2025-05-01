@@ -1,12 +1,15 @@
 <script lang="ts">
+  // Base URL for backend API
   const BASE_URL = 'http://127.0.0.1:8000';
   import { onMount } from 'svelte';
+
+  // Fetch data when component mounts
   onMount(() => {
     fetch(`${BASE_URL}/api/ucdavis-news`)
-      .then(statusCheck)
-      .then(resp => resp.json())
-      .then(processData)
-      .catch(handleError); 
+      .then(statusCheck) // Validate HTTP status     
+      .then(resp => resp.json()) // Parse JSON body
+      .then(processData) // Populate the DOM with fetched articles
+      .catch(handleError); // Handle any fetch errors
   });
 
   /**
@@ -239,12 +242,15 @@
 </main>
 
 <style>
+  /* Layout for the content area: three columns with gaps */
   #content {
     margin-top: 1rem;
     gap: 1rem;
     display: flex;
     flex-direction: row;
   }
+
+  /* Article column styling */
   .articles {
     display: flex;
     display: column;
@@ -256,22 +262,27 @@
     gap: 1rem;
   }
 
+  /* Headline styling */
   .articles article h2 {
     font-size: 1.2rem;
     cursor: pointer;
   }
+
+  /* Paragraph text styling */
   .articles p {
     margin: 0.8rem 0 0.2rem 0;
     font-size: 1rem;
     color: rgb(114, 110, 110);
   }
 
+  /* Horizontal separator between articles */
   .hline {
     height: 0.5px;
     background-color: rgb(175, 165, 165);
     margin: 1rem 0;
   }
 
+  /* Read time text styling */
   .articles .readtime {
     font-family: "Lato", sans-serif;
     margin: 0.5rem 0 0.2rem 0;
@@ -280,6 +291,7 @@
     font-style: normal;
   }
 
+   /* Image column styling */
   .images {
     flex: 1.2;
     margin: 0rem 0.5rem;
@@ -289,16 +301,22 @@
     height: auto;
     margin: 1rem 0rem;
   }
+
+  /* Vertical separator between columns */
   .pline {
     width: 0.5px;
     background-color: rgb(196, 190, 190);
   }
+
+  /* Sidebar (aside) styling */
   #content aside {
     flex: 0.5;
   }
   #content aside img {
     max-width: 100%;
   }
+
+  /* Ensure all images scale responsively */
   .picture {
     width: 100%;
     height: auto;

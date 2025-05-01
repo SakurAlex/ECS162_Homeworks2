@@ -1,15 +1,16 @@
 <script>
+    // Import the New York Times logo
     import logo from './assets/NewYorkTimes.svg';
     
     //Keep current date on the top left corner
     const date = new Date();
     const currentDate = date.toLocaleString("en-US", {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit"
+        weekday: "long", // Full weekday name, e.g., "Monday"
+        year: "numeric", // Four-digit year
+        month: "long", // Full month name, e.g., "January"
+        day: "numeric", // Day of the month
+        hour: "2-digit", // Hour (00–23)
+        minute: "2-digit" // Minute (00–59)
     });
 
     //Trend data on the top right corner
@@ -31,8 +32,11 @@
         }
     ];
 
+    // Index to track current trend item
     let index = 0;
+    // Initialize displayed trend to the first element
     let currentTrend = data[0];
+
     /**
      * This function updates the current trend.
      */
@@ -41,6 +45,7 @@
         currentTrend = data[index];
     }
 
+    // Rotate trend every 1.5 seconds
     setInterval(updateMarket, 1500);
 </script>
 
@@ -72,12 +77,15 @@
 </div>
 
 <style>
+/* Flex layout to space out date, logo, and trend evenly */
 #logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
 }
+
+/* Styling for the date block */
 #date {
     display:flex;
     flex-direction: column;
@@ -85,10 +93,14 @@
     gap: 0.5rem;
     font-size: 0.85rem;
 }
+
+/* Logo image sizing */
 #logo img {
     height: 4rem;
     max-width: 100%;
 }
+
+/* Container for the rotating trend display */
 #trend {
     width: 8rem;
     max-width: 12%;

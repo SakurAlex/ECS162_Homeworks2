@@ -1,4 +1,5 @@
 <script>
+    // Import sub-components for each part of the site header
     import Top from "./Top.svelte";
     import Logo from "./Logo.svelte"; 
     import Categories from "./Categories.svelte";
@@ -21,6 +22,7 @@
 </header>
 
 <style>
+/* Base header typography and spacing */
 header {
     font-family: "Lato", sans-serif;
     font-weight: 450;

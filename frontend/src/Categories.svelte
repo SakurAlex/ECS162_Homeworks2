@@ -29,27 +29,36 @@
 </nav>
 
 <style>
+/* Flex layout for navigation: centered items with wrapping */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 0.75rem 1rem;
-    border-bottom: 2px double grey;
+    border-bottom: 2px double grey; /* Double-lined bottom border */
 }
+
+/* Layout for each group of links */
 nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
+    gap: 1rem; /* Spacing between list items */
+    list-style: none; /* Remove default bullets */
 }
+
+/* Style for each navigation item */
 nav li {
-    position: relative;
-    cursor: pointer;
+    position: relative; /* For potential dropdown positioning */
+    cursor: pointer; /* Pointer cursor on hover */
 }
+
+/* Size the dropdown arrow icon */
 nav li img {
     width: 0.5rem;
 }
+
+/* Vertical line separator styling */
 #vline {
     width: 1px;
     height: 1.2rem;
