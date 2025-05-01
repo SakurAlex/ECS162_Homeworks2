@@ -11,20 +11,67 @@
             Image source: veryicon
             https://www.veryicon.com/icons/system/zoomlion-linear-icon/drop-down-43.html
         -->
-        <li>U.S. <img src={arrow} alt="arrow"></li> <!-- Dropdown icon -->
-        <li>World <img src={arrow} alt="arrow"></li>
-        <li>Business <img src={arrow} alt="arrow"></li>
-        <li>Arts <img src={arrow} alt="arrow"></li>
-        <li>Lifestyle <img src={arrow} alt="arrow"></li>
-        <li>Opinion <img src={arrow} alt="arrow"></li>
+        <li>
+            <a href="https://www.nytimes.com/section/us" target="_blank" rel="noopener">
+                U.S. <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/section/world" target="_blank" rel="noopener">
+                World <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/section/business" target="_blank" rel="noopener">
+                Business <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/section/arts" target="_blank" rel="noopener">
+                Arts <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/spotlight/lifestyle" target="_blank" rel="noopener">
+                Lifestyle <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/section/opinion" target="_blank" rel="noopener">
+                Opinion <img src={arrow} alt="arrow" />
+            </a>
+        </li>
     </ul>
-    <div id="vline"></div> <!-- Vertical separator -->
+
+    <!-- Vertical separator -->
+    <div id="vline"></div> 
+
     <ul> <!-- Right links -->
-        <li>Audio <img src={arrow} alt="arrow"></li>
-        <li>Games <img src={arrow} alt="arrow"></li>
-        <li>Cooking <img src={arrow} alt="arrow"></li>
-        <li>Wirecutter <img src={arrow} alt="arrow"></li>
-        <li>The Athletic <img src={arrow} alt="arrow"></li>
+        <li>
+            <a href="https://www.nytimes.com/spotlight/podcasts" target="_blank" rel="noopener">
+                Audio <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/crosswords" target="_blank" rel="noopener">
+                Games <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://cooking.nytimes.com/" target="_blank" rel="noopener">
+                Cooking <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/wirecutter/" target="_blank" rel="noopener">
+                Wirecutter <img src={arrow} alt="arrow" />
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/athletic/" target="_blank" rel="noopener">
+                The Athletic <img src={arrow} alt="arrow" />
+            </a>
+        </li>
     </ul>
 </nav>
 
