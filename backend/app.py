@@ -11,6 +11,13 @@ template_path = os.getenv('TEMPLATE_PATH','templates') # Directory for HTML temp
 app = Flask(__name__, static_folder=static_path, template_folder=template_path)
 CORS(app)
 
+
+@app.route('/api/key')
+def get_api_key():
+    # grab it from the environment
+    key = os.getenv('NYT_API_KEY','')
+    return jsonify({'api_key': key})
+
 @app.route('/api/ucdavis-news') # API endpoint to fetch UC Davis–related articles
 def get_news():
     # Build the request URL with query parameters and API key
